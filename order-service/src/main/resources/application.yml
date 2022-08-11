@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  jpa:
+    database: mysql
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/orders?createDatabaseIfNotExists=true
+    username: root
+    password: root
+  sql:
+    init:
+      platform: org.hibernate.dialect.MySQL5Dialect
