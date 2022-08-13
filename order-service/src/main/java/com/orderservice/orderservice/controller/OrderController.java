@@ -19,6 +19,5 @@ public class OrderController {
     @PostMapping("/order")
     public CustomerOrder createOrder(@RequestBody CustomerOrder order) {
         return service.save(order);
-
     }
 }

@@ -12,8 +12,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @ToString
 public class KafkaMessage {
-    private String event;
-    private long eventId;
-    private LocalDateTime createdAt;
+    private LocalDateTime receivedAt;
     private Payload payload;
 }

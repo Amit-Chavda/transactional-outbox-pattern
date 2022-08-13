@@ -24,25 +24,19 @@ public class OrderService {
 
     public CustomerOrder save(CustomerOrder order) {
 
-         CustomerOrder order2 = orderRepository.save(order);
+        order = orderRepository.save(order);
 
-        Outbox outbox = new Outbox();
 
-        outbox.setEvent("order_created");
-        outbox.setEventId(order.getId());
-
-        outbox.setPayload(order2);
-
-        outbox.setCreatedAt(LocalDateTime.now());
-
-        System.out.println("Outbox: " + outboxRepository.save(outbox));
-
+        Outbox payload = new Outbox();
+        payload.setEvent("order_created");
+        payload.setEventId(order.getId());
+        payload.setCustomerOrder(order);
+        payload.setCreatedAt(LocalDateTime.now());
 
         //delete immediately - still the entry will be picked up from the logs as there was an insert
         //in the previous line
-
-        //outboxRepository.delete(outbox);
-        return order2;
+        outboxRepository.delete(payload);
+        return order;
     }
 
     public Collection<CustomerOrder> findAll() {

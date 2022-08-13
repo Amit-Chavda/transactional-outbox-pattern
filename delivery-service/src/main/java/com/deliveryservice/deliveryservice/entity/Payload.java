@@ -5,11 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class Payload {
-    private String name;
-    private int qty;
+    private int id;
+    private String event;
+    private long eventId;
+    private transient CustomerOrder customerOrder;
+    private LocalDateTime createdAt;
 }

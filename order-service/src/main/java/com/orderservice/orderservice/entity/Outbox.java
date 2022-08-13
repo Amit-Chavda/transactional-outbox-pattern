@@ -21,7 +21,6 @@ public class Outbox {
 
     private String event;
     private long eventId;
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private CustomerOrder payload;
+    private transient CustomerOrder customerOrder;
     private LocalDateTime createdAt;
 }
