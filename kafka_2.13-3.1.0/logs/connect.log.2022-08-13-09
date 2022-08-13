@@ -1,0 +1,1100 @@
+[2022-08-13 09:58:32,546] INFO Kafka Connect standalone worker initializing ... (org.apache.kafka.connect.cli.ConnectStandalone:68)
+[2022-08-13 09:58:32,553] INFO WorkerInfo values: 
+	jvm.args = -Xmx256M, -XX:+UseG1GC, -XX:MaxGCPauseMillis=20, -XX:InitiatingHeapOccupancyPercent=35, -XX:+ExplicitGCInvokesConcurrent, -Djava.awt.headless=true, -Dcom.sun.management.jmxremote, -Dcom.sun.management.jmxremote.authenticate=false, -Dcom.sun.management.jmxremote.ssl=false, -Dkafka.logs.dir=C:\kafka/logs, -Dlog4j.configuration=file:C:\kafka/config/connect-log4j.properties
+	jvm.spec = Oracle Corporation, Java HotSpot(TM) 64-Bit Server VM, 17.0.2, 17.0.2+8-LTS-86
+	jvm.classpath = C:\kafka\libs\activation-1.1.1.jar;C:\kafka\libs\aopalliance-repackaged-2.6.1.jar;C:\kafka\libs\argparse4j-0.7.0.jar;C:\kafka\libs\audience-annotations-0.5.0.jar;C:\kafka\libs\commons-cli-1.4.jar;C:\kafka\libs\commons-lang3-3.8.1.jar;C:\kafka\libs\connect-api-3.1.0.jar;C:\kafka\libs\connect-basic-auth-extension-3.1.0.jar;C:\kafka\libs\connect-file-3.1.0.jar;C:\kafka\libs\connect-json-3.1.0.jar;C:\kafka\libs\connect-mirror-3.1.0.jar;C:\kafka\libs\connect-mirror-client-3.1.0.jar;C:\kafka\libs\connect-runtime-3.1.0.jar;C:\kafka\libs\connect-transforms-3.1.0.jar;C:\kafka\libs\hk2-api-2.6.1.jar;C:\kafka\libs\hk2-locator-2.6.1.jar;C:\kafka\libs\hk2-utils-2.6.1.jar;C:\kafka\libs\jackson-annotations-2.12.3.jar;C:\kafka\libs\jackson-core-2.12.3.jar;C:\kafka\libs\jackson-databind-2.12.3.jar;C:\kafka\libs\jackson-dataformat-csv-2.12.3.jar;C:\kafka\libs\jackson-datatype-jdk8-2.12.3.jar;C:\kafka\libs\jackson-jaxrs-base-2.12.3.jar;C:\kafka\libs\jackson-jaxrs-json-provider-2.12.3.jar;C:\kafka\libs\jackson-module-jaxb-annotations-2.12.3.jar;C:\kafka\libs\jackson-module-scala_2.13-2.12.3.jar;C:\kafka\libs\jakarta.activation-api-1.2.1.jar;C:\kafka\libs\jakarta.annotation-api-1.3.5.jar;C:\kafka\libs\jakarta.inject-2.6.1.jar;C:\kafka\libs\jakarta.validation-api-2.0.2.jar;C:\kafka\libs\jakarta.ws.rs-api-2.1.6.jar;C:\kafka\libs\jakarta.xml.bind-api-2.3.2.jar;C:\kafka\libs\javassist-3.27.0-GA.jar;C:\kafka\libs\javax.servlet-api-3.1.0.jar;C:\kafka\libs\javax.ws.rs-api-2.1.1.jar;C:\kafka\libs\jaxb-api-2.3.0.jar;C:\kafka\libs\jersey-client-2.34.jar;C:\kafka\libs\jersey-common-2.34.jar;C:\kafka\libs\jersey-container-servlet-2.34.jar;C:\kafka\libs\jersey-container-servlet-core-2.34.jar;C:\kafka\libs\jersey-hk2-2.34.jar;C:\kafka\libs\jersey-server-2.34.jar;C:\kafka\libs\jetty-client-9.4.43.v20210629.jar;C:\kafka\libs\jetty-continuation-9.4.43.v20210629.jar;C:\kafka\libs\jetty-http-9.4.43.v20210629.jar;C:\kafka\libs\jetty-io-9.4.43.v20210629.jar;C:\kafka\libs\jetty-security-9.4.43.v20210629.jar;C:\kafka\libs\jetty-server-9.4.43.v20210629.jar;C:\kafka\libs\jetty-servlet-9.4.43.v20210629.jar;C:\kafka\libs\jetty-servlets-9.4.43.v20210629.jar;C:\kafka\libs\jetty-util-9.4.43.v20210629.jar;C:\kafka\libs\jetty-util-ajax-9.4.43.v20210629.jar;C:\kafka\libs\jline-3.12.1.jar;C:\kafka\libs\jopt-simple-5.0.4.jar;C:\kafka\libs\jose4j-0.7.8.jar;C:\kafka\libs\kafka-clients-3.1.0.jar;C:\kafka\libs\kafka-log4j-appender-3.1.0.jar;C:\kafka\libs\kafka-metadata-3.1.0.jar;C:\kafka\libs\kafka-raft-3.1.0.jar;C:\kafka\libs\kafka-server-common-3.1.0.jar;C:\kafka\libs\kafka-shell-3.1.0.jar;C:\kafka\libs\kafka-storage-3.1.0.jar;C:\kafka\libs\kafka-storage-api-3.1.0.jar;C:\kafka\libs\kafka-streams-3.1.0.jar;C:\kafka\libs\kafka-streams-examples-3.1.0.jar;C:\kafka\libs\kafka-streams-scala_2.13-3.1.0.jar;C:\kafka\libs\kafka-streams-test-utils-3.1.0.jar;C:\kafka\libs\kafka-tools-3.1.0.jar;C:\kafka\libs\kafka_2.13-3.1.0.jar;C:\kafka\libs\log4j-1.2.17.jar;C:\kafka\libs\lz4-java-1.8.0.jar;C:\kafka\libs\maven-artifact-3.8.1.jar;C:\kafka\libs\metrics-core-2.2.0.jar;C:\kafka\libs\metrics-core-4.1.12.1.jar;C:\kafka\libs\netty-buffer-4.1.68.Final.jar;C:\kafka\libs\netty-codec-4.1.68.Final.jar;C:\kafka\libs\netty-common-4.1.68.Final.jar;C:\kafka\libs\netty-handler-4.1.68.Final.jar;C:\kafka\libs\netty-resolver-4.1.68.Final.jar;C:\kafka\libs\netty-transport-4.1.68.Final.jar;C:\kafka\libs\netty-transport-native-epoll-4.1.68.Final.jar;C:\kafka\libs\netty-transport-native-unix-common-4.1.68.Final.jar;C:\kafka\libs\osgi-resource-locator-1.0.3.jar;C:\kafka\libs\paranamer-2.8.jar;C:\kafka\libs\plexus-utils-3.2.1.jar;C:\kafka\libs\reflections-0.9.12.jar;C:\kafka\libs\rocksdbjni-6.22.1.1.jar;C:\kafka\libs\scala-collection-compat_2.13-2.4.4.jar;C:\kafka\libs\scala-java8-compat_2.13-1.0.0.jar;C:\kafka\libs\scala-library-2.13.6.jar;C:\kafka\libs\scala-logging_2.13-3.9.3.jar;C:\kafka\libs\scala-reflect-2.13.6.jar;C:\kafka\libs\slf4j-api-1.7.30.jar;C:\kafka\libs\slf4j-log4j12-1.7.30.jar;C:\kafka\libs\snappy-java-1.1.8.4.jar;C:\kafka\libs\trogdor-3.1.0.jar;C:\kafka\libs\zookeeper-3.6.3.jar;C:\kafka\libs\zookeeper-jute-3.6.3.jar;C:\kafka\libs\zstd-jni-1.5.0-4.jar
+	os.spec = Windows 10, amd64, 10.0
+	os.vcpus = 8
+ (org.apache.kafka.connect.runtime.WorkerInfo:71)
+[2022-08-13 09:58:32,555] INFO Scanning for plugin classes. This might take a moment ... (org.apache.kafka.connect.cli.ConnectStandalone:77)
+[2022-08-13 09:58:32,567] INFO Loading plugin from: C:\kafka\opt\connectors\debezium-debezium-connector-mysql-1.9.3 (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:265)
+[2022-08-13 09:58:32,976] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/kafka/opt/connectors/debezium-debezium-connector-mysql-1.9.3/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:288)
+[2022-08-13 09:58:32,976] INFO Added plugin 'io.debezium.connector.mysql.MySqlConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,978] INFO Added plugin 'io.debezium.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,985] INFO Added plugin 'io.debezium.converters.ByteBufferConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,985] INFO Added plugin 'io.debezium.converters.BinaryDataConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,985] INFO Added plugin 'io.debezium.converters.CloudEventsConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,986] INFO Added plugin 'io.debezium.transforms.outbox.EventRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,986] INFO Added plugin 'io.debezium.transforms.ExtractNewRecordState' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,986] INFO Added plugin 'io.debezium.connector.mysql.transforms.ReadToInsertEvent' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,987] INFO Added plugin 'io.debezium.transforms.ByLogicalTableRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,987] INFO Added plugin 'io.debezium.transforms.tracing.ActivateTracingSpan' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,988] INFO Added plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,997] INFO Added plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:32,997] INFO Added plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,905] INFO Registered loader: jdk.internal.loader.ClassLoaders$AppClassLoader@266474c2 (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:288)
+[2022-08-13 09:58:33,905] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,907] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,907] INFO Added plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,915] INFO Added plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,916] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,917] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,918] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,919] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,920] INFO Added plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,921] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,922] INFO Added plugin 'org.apache.kafka.connect.tools.MockConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,923] INFO Added plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,924] INFO Added plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,925] INFO Added plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,925] INFO Added plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,926] INFO Added plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,927] INFO Added plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,927] INFO Added plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,928] INFO Added plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,929] INFO Added plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,932] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,937] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,937] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,938] INFO Added plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,938] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,939] INFO Added plugin 'org.apache.kafka.connect.transforms.HeaderFrom$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,939] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,940] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,940] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,941] INFO Added plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,941] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,943] INFO Added plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,943] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,944] INFO Added plugin 'org.apache.kafka.connect.transforms.DropHeaders' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,944] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,944] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,947] INFO Added plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,952] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,952] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,953] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertHeader' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,953] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,953] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,954] INFO Added plugin 'org.apache.kafka.connect.transforms.HeaderFrom$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,954] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,955] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,955] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,956] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,956] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,957] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,957] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,958] INFO Added plugin 'org.apache.kafka.common.config.provider.FileConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,959] INFO Added plugin 'org.apache.kafka.common.config.provider.DirectoryConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,959] INFO Added plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:217)
+[2022-08-13 09:58:33,960] INFO Added aliases 'MySqlConnector' and 'MySql' to plugin 'io.debezium.connector.mysql.MySqlConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,962] INFO Added aliases 'FileStreamSinkConnector' and 'FileStreamSink' to plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,968] INFO Added aliases 'FileStreamSourceConnector' and 'FileStreamSource' to plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,969] INFO Added aliases 'MirrorCheckpointConnector' and 'MirrorCheckpoint' to plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,969] INFO Added aliases 'MirrorHeartbeatConnector' and 'MirrorHeartbeat' to plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,970] INFO Added aliases 'MirrorSourceConnector' and 'MirrorSource' to plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,971] INFO Added aliases 'MockConnector' and 'Mock' to plugin 'org.apache.kafka.connect.tools.MockConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,971] INFO Added aliases 'MockSinkConnector' and 'MockSink' to plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,972] INFO Added aliases 'MockSourceConnector' and 'MockSource' to plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,972] INFO Added aliases 'SchemaSourceConnector' and 'SchemaSource' to plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,972] INFO Added aliases 'VerifiableSinkConnector' and 'VerifiableSink' to plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,973] INFO Added aliases 'VerifiableSourceConnector' and 'VerifiableSource' to plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,973] INFO Added aliases 'BinaryDataConverter' and 'BinaryData' to plugin 'io.debezium.converters.BinaryDataConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,974] INFO Added aliases 'ByteBufferConverter' and 'ByteBuffer' to plugin 'io.debezium.converters.ByteBufferConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,974] INFO Added aliases 'CloudEventsConverter' and 'CloudEvents' to plugin 'io.debezium.converters.CloudEventsConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,975] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,976] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,979] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,984] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,984] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,985] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,985] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,986] INFO Added aliases 'BinaryDataConverter' and 'BinaryData' to plugin 'io.debezium.converters.BinaryDataConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,986] INFO Added aliases 'ByteBufferConverter' and 'ByteBuffer' to plugin 'io.debezium.converters.ByteBufferConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,986] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,986] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,988] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,988] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,988] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,988] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,988] INFO Added alias 'SimpleHeaderConverter' to plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:33,989] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:33,989] INFO Added alias 'ReadToInsertEvent' to plugin 'io.debezium.connector.mysql.transforms.ReadToInsertEvent' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:33,990] INFO Added alias 'ByLogicalTableRouter' to plugin 'io.debezium.transforms.ByLogicalTableRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:33,990] INFO Added alias 'ExtractNewRecordState' to plugin 'io.debezium.transforms.ExtractNewRecordState' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:33,990] INFO Added alias 'EventRouter' to plugin 'io.debezium.transforms.outbox.EventRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:33,992] INFO Added alias 'ActivateTracingSpan' to plugin 'io.debezium.transforms.tracing.ActivateTracingSpan' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:33,995] INFO Added aliases 'PredicatedTransformation' and 'Predicated' to plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:34,000] INFO Added alias 'DropHeaders' to plugin 'org.apache.kafka.connect.transforms.DropHeaders' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,001] INFO Added alias 'Filter' to plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,001] INFO Added alias 'InsertHeader' to plugin 'org.apache.kafka.connect.transforms.InsertHeader' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,001] INFO Added alias 'RegexRouter' to plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,002] INFO Added alias 'TimestampRouter' to plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,002] INFO Added alias 'ValueToKey' to plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,003] INFO Added alias 'HasHeaderKey' to plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,003] INFO Added alias 'RecordIsTombstone' to plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,004] INFO Added alias 'TopicNameMatches' to plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,004] INFO Added alias 'BasicAuthSecurityRestExtension' to plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:459)
+[2022-08-13 09:58:34,004] INFO Added aliases 'AllConnectorClientConfigOverridePolicy' and 'All' to plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:34,005] INFO Added aliases 'NoneConnectorClientConfigOverridePolicy' and 'None' to plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:34,005] INFO Added aliases 'PrincipalConnectorClientConfigOverridePolicy' and 'Principal' to plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:462)
+[2022-08-13 09:58:34,027] INFO StandaloneConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = All
+	header.converter = class org.apache.kafka.connect.storage.SimpleHeaderConverter
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	listeners = [http://:8083]
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 10000
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = C:/kafka/tmp/connect.offsets
+	plugin.path = [/opt/connectors, C:/kafka/opt/connectors]
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.standalone.StandaloneConfig:376)
+[2022-08-13 09:58:34,028] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:49)
+[2022-08-13 09:58:34,034] INFO AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:376)
+[2022-08-13 09:58:34,111] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,111] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,113] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,119] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,120] WARN The configuration 'plugin.path' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,120] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,121] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,121] INFO Kafka version: 3.1.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-08-13 09:58:34,122] INFO Kafka commitId: 37edeed0777bacb3 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-08-13 09:58:34,122] INFO Kafka startTimeMs: 1660364914121 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-08-13 09:58:34,343] INFO Kafka cluster ID: 4wg6huU-T3i2wdraQxDkuw (org.apache.kafka.connect.util.ConnectUtils:65)
+[2022-08-13 09:58:34,344] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-08-13 09:58:34,350] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-08-13 09:58:34,352] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-08-13 09:58:34,353] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-08-13 09:58:34,362] INFO Logging initialized @2166ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log:170)
+[2022-08-13 09:58:34,389] INFO Added connector for http://:8083 (org.apache.kafka.connect.runtime.rest.RestServer:117)
+[2022-08-13 09:58:34,390] INFO Initializing REST server (org.apache.kafka.connect.runtime.rest.RestServer:188)
+[2022-08-13 09:58:34,409] INFO jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 17.0.2+8-LTS-86 (org.eclipse.jetty.server.Server:375)
+[2022-08-13 09:58:34,434] INFO Started http_8083@66434cc8{HTTP/1.1, (http/1.1)}{0.0.0.0:8083} (org.eclipse.jetty.server.AbstractConnector:331)
+[2022-08-13 09:58:34,435] INFO Started @2239ms (org.eclipse.jetty.server.Server:415)
+[2022-08-13 09:58:34,450] INFO Advertised URI: http://192.168.0.111:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:355)
+[2022-08-13 09:58:34,450] INFO REST server listening at http://192.168.0.111:8083/, advertising URL http://192.168.0.111:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:203)
+[2022-08-13 09:58:34,451] INFO Advertised URI: http://192.168.0.111:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:355)
+[2022-08-13 09:58:34,458] INFO REST admin endpoints at http://192.168.0.111:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:204)
+[2022-08-13 09:58:34,460] INFO Advertised URI: http://192.168.0.111:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:355)
+[2022-08-13 09:58:34,463] INFO Setting up All Policy for ConnectorClientConfigOverride. This will allow all client configurations to be overridden (org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy:44)
+[2022-08-13 09:58:34,481] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:49)
+[2022-08-13 09:58:34,482] INFO AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:376)
+[2022-08-13 09:58:34,492] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,492] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,493] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,493] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,500] WARN The configuration 'plugin.path' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,501] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,504] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:34,504] INFO Kafka version: 3.1.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-08-13 09:58:34,504] INFO Kafka commitId: 37edeed0777bacb3 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-08-13 09:58:34,505] INFO Kafka startTimeMs: 1660364914504 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-08-13 09:58:34,515] INFO Kafka cluster ID: 4wg6huU-T3i2wdraQxDkuw (org.apache.kafka.connect.util.ConnectUtils:65)
+[2022-08-13 09:58:34,516] INFO App info kafka.admin.client for adminclient-2 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-08-13 09:58:34,520] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-08-13 09:58:34,520] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-08-13 09:58:34,521] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-08-13 09:58:34,526] INFO Kafka version: 3.1.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-08-13 09:58:34,527] INFO Kafka commitId: 37edeed0777bacb3 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-08-13 09:58:34,528] INFO Kafka startTimeMs: 1660364914526 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-08-13 09:58:34,619] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-08-13 09:58:34,621] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-08-13 09:58:34,627] INFO Kafka Connect standalone worker initialization took 2079ms (org.apache.kafka.connect.cli.ConnectStandalone:99)
+[2022-08-13 09:58:34,628] INFO Kafka Connect starting (org.apache.kafka.connect.runtime.Connect:51)
+[2022-08-13 09:58:34,629] INFO Herder starting (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:98)
+[2022-08-13 09:58:34,629] INFO Worker starting (org.apache.kafka.connect.runtime.Worker:185)
+[2022-08-13 09:58:34,629] INFO Starting FileOffsetBackingStore with file C:\kafka\tmp\connect.offsets (org.apache.kafka.connect.storage.FileOffsetBackingStore:58)
+[2022-08-13 09:58:34,632] INFO Worker started (org.apache.kafka.connect.runtime.Worker:192)
+[2022-08-13 09:58:34,632] INFO Herder started (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:101)
+[2022-08-13 09:58:34,632] INFO Initializing REST resources (org.apache.kafka.connect.runtime.rest.RestServer:208)
+[2022-08-13 09:58:34,656] INFO Adding admin resources to main listener (org.apache.kafka.connect.runtime.rest.RestServer:225)
+[2022-08-13 09:58:34,698] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session:334)
+[2022-08-13 09:58:34,698] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session:339)
+[2022-08-13 09:58:34,700] INFO node0 Scavenging every 660000ms (org.eclipse.jetty.server.session:132)
+[2022-08-13 09:58:35,044] INFO Started o.e.j.s.ServletContextHandler@7fc7c4a{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler:915)
+[2022-08-13 09:58:35,045] INFO REST resources initialized; server is started and ready to handle requests (org.apache.kafka.connect.runtime.rest.RestServer:303)
+[2022-08-13 09:58:35,051] INFO Kafka Connect started (org.apache.kafka.connect.runtime.Connect:57)
+[2022-08-13 09:58:35,204] INFO Successfully tested connection for jdbc:mysql://localhost:3306/?useInformationSchema=true&nullCatalogMeansCurrent=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&connectTimeout=30000 with user 'root' (io.debezium.connector.mysql.MySqlConnector:100)
+[2022-08-13 09:58:35,210] INFO Connection gracefully closed (io.debezium.jdbc.JdbcConnection:956)
+[2022-08-13 09:58:35,212] INFO AbstractConfig values: 
+ (org.apache.kafka.common.config.AbstractConfig:376)
+[2022-08-13 09:58:35,222] INFO [connector1|worker] Creating connector connector1 of type io.debezium.connector.mysql.MySqlConnector (org.apache.kafka.connect.runtime.Worker:265)
+[2022-08-13 09:58:35,222] INFO [connector1|worker] SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	name = connector1
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-08-13 09:58:35,223] INFO [connector1|worker] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	name = connector1
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-08-13 09:58:35,247] INFO [connector1|worker] Instantiated connector connector1 with version 1.9.3.Final of type class io.debezium.connector.mysql.MySqlConnector (org.apache.kafka.connect.runtime.Worker:275)
+[2022-08-13 09:58:35,251] INFO [connector1|worker] Finished creating connector connector1 (org.apache.kafka.connect.runtime.Worker:300)
+[2022-08-13 09:58:35,255] INFO SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	name = connector1
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-08-13 09:58:35,257] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	name = connector1
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-08-13 09:58:35,261] INFO [connector1|task-0] Creating task connector1-0 (org.apache.kafka.connect.runtime.Worker:499)
+[2022-08-13 09:58:35,262] INFO [connector1|task-0] ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	name = connector1
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:376)
+[2022-08-13 09:58:35,268] INFO [connector1|task-0] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	name = connector1
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-08-13 09:58:35,271] INFO [connector1|task-0] TaskConfig values: 
+	task.class = class io.debezium.connector.mysql.MySqlConnectorTask
+ (org.apache.kafka.connect.runtime.TaskConfig:376)
+[2022-08-13 09:58:35,272] INFO [connector1|task-0] Instantiated task connector1-0 with version 1.9.3.Final of type io.debezium.connector.mysql.MySqlConnectorTask (org.apache.kafka.connect.runtime.Worker:514)
+[2022-08-13 09:58:35,273] INFO [connector1|task-0] JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-08-13 09:58:35,273] INFO [connector1|task-0] JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-08-13 09:58:35,274] INFO [connector1|task-0] Set up the key converter class org.apache.kafka.connect.json.JsonConverter for task connector1-0 using the connector config (org.apache.kafka.connect.runtime.Worker:529)
+[2022-08-13 09:58:35,274] INFO [connector1|task-0] Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task connector1-0 using the connector config (org.apache.kafka.connect.runtime.Worker:535)
+[2022-08-13 09:58:35,275] INFO [connector1|task-0] Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task connector1-0 using the worker config (org.apache.kafka.connect.runtime.Worker:540)
+[2022-08-13 09:58:35,279] INFO [connector1|task-0] SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	name = connector1
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-08-13 09:58:35,284] INFO [connector1|task-0] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	name = connector1
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-08-13 09:58:35,286] INFO [connector1|task-0] Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:594)
+[2022-08-13 09:58:35,290] INFO [connector1|task-0] ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-producer-connector1-0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 2147483647
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 9223372036854775807
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+ (org.apache.kafka.clients.producer.ProducerConfig:376)
+[2022-08-13 09:58:35,313] WARN [connector1|task-0] The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.producer.ProducerConfig:384)
+[2022-08-13 09:58:35,313] INFO [connector1|task-0] Kafka version: 3.1.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-08-13 09:58:35,315] INFO [connector1|task-0] Kafka commitId: 37edeed0777bacb3 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-08-13 09:58:35,322] INFO [connector1|task-0] Kafka startTimeMs: 1660364915313 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-08-13 09:58:35,321] INFO [connector1|task-0] [Producer clientId=connector-producer-connector1-0] Cluster ID: 4wg6huU-T3i2wdraQxDkuw (org.apache.kafka.clients.Metadata:287)
+[2022-08-13 09:58:35,330] INFO Created connector connector1 (org.apache.kafka.connect.cli.ConnectStandalone:109)
+[2022-08-13 09:58:35,330] INFO [connector1|task-0] Starting MySqlConnectorTask with configuration: (io.debezium.connector.common.BaseSourceTask:124)
+[2022-08-13 09:58:35,332] INFO [connector1|task-0]    connector.class = io.debezium.connector.mysql.MySqlConnector (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,337] INFO [connector1|task-0]    database.user = root (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,337] INFO [connector1|task-0]    database.dbname = orders (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,338] INFO [connector1|task-0]    tasks.max = 1 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,338] INFO [connector1|task-0]    database.history.kafka.bootstrap.servers = localhost:9092 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,339] INFO [connector1|task-0]    database.history.kafka.topic = demo (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,339] INFO [connector1|task-0]    database.server.name = order_server (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,340] INFO [connector1|task-0]    database.port = 3306 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,340] INFO [connector1|task-0]    include.schema.changes = true (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,341] INFO [connector1|task-0]    offset.storage.file.filename = C:/kafka/tmp/connect.offsets (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,341] INFO [connector1|task-0]    task.class = io.debezium.connector.mysql.MySqlConnectorTask (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,342] INFO [connector1|task-0]    database.hostname = localhost (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,345] INFO [connector1|task-0]    database.password = ******** (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,350] INFO [connector1|task-0]    name = connector1 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,351] INFO [connector1|task-0]    transforms.unwrap.type = io.debezium.transforms.ExtractNewRecordState (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,351] INFO [connector1|task-0]    table.include.list = orders.outbox (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,352] INFO [connector1|task-0]    value.converter = org.apache.kafka.connect.json.JsonConverter (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,352] INFO [connector1|task-0]    database.database.whitelist = test (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,353] INFO [connector1|task-0]    key.converter = org.apache.kafka.connect.json.JsonConverter (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,353] INFO [connector1|task-0]    database.include.list = orders (io.debezium.connector.common.BaseSourceTask:126)
+[2022-08-13 09:58:35,389] INFO [connector1|task-0] No previous offsets found (io.debezium.connector.common.BaseSourceTask:318)
+[2022-08-13 09:58:35,415] INFO [connector1|task-0] KafkaDatabaseHistory Consumer config: {key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, value.deserializer=org.apache.kafka.common.serialization.StringDeserializer, enable.auto.commit=false, group.id=order_server-dbhistory, bootstrap.servers=localhost:9092, fetch.min.bytes=1, session.timeout.ms=10000, auto.offset.reset=earliest, client.id=order_server-dbhistory} (io.debezium.relational.history.KafkaDatabaseHistory:243)
+[2022-08-13 09:58:35,415] INFO [connector1|task-0] KafkaDatabaseHistory Producer config: {retries=1, value.serializer=org.apache.kafka.common.serialization.StringSerializer, acks=1, batch.size=32768, max.block.ms=10000, bootstrap.servers=localhost:9092, buffer.memory=1048576, key.serializer=org.apache.kafka.common.serialization.StringSerializer, client.id=order_server-dbhistory, linger.ms=0} (io.debezium.relational.history.KafkaDatabaseHistory:244)
+[2022-08-13 09:58:35,416] INFO [connector1|task-0] Requested thread factory for connector MySqlConnector, id = order_server named = db-history-config-check (io.debezium.util.Threads:270)
+[2022-08-13 09:58:35,418] INFO [connector1|task-0] ProducerConfig values: 
+	acks = 1
+	batch.size = 32768
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 1048576
+	client.dns.lookup = use_all_dns_ips
+	client.id = order_server-dbhistory
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 10000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 1
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ (org.apache.kafka.clients.producer.ProducerConfig:376)
+[2022-08-13 09:58:35,423] INFO [connector1|task-0] Kafka version: 3.1.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-08-13 09:58:35,427] INFO [connector1|task-0] Kafka commitId: 37edeed0777bacb3 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-08-13 09:58:35,428] INFO [connector1|task-0] Kafka startTimeMs: 1660364915423 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-08-13 09:58:35,432] INFO [connector1|task-0] [Producer clientId=order_server-dbhistory] Cluster ID: 4wg6huU-T3i2wdraQxDkuw (org.apache.kafka.clients.Metadata:287)
+[2022-08-13 09:58:35,450] INFO [connector1|task-0] Closing connection before starting schema recovery (io.debezium.connector.mysql.MySqlConnectorTask:95)
+[2022-08-13 09:58:35,451] INFO [connector1|task-0] Connection gracefully closed (io.debezium.jdbc.JdbcConnection:956)
+[2022-08-13 09:58:35,451] INFO [connector1|task-0] Connector started for the first time, database history recovery will not be executed (io.debezium.connector.mysql.MySqlConnectorTask:330)
+[2022-08-13 09:58:35,460] INFO [connector1|task-0] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = order_server-dbhistory
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = order_server-dbhistory
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:376)
+[2022-08-13 09:58:35,489] INFO [connector1|task-0] Kafka version: 3.1.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-08-13 09:58:35,489] INFO [connector1|task-0] Kafka commitId: 37edeed0777bacb3 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-08-13 09:58:35,490] INFO [connector1|task-0] Kafka startTimeMs: 1660364915489 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-08-13 09:58:35,506] INFO [connector1|task-0] [Consumer clientId=order_server-dbhistory, groupId=order_server-dbhistory] Cluster ID: 4wg6huU-T3i2wdraQxDkuw (org.apache.kafka.clients.Metadata:287)
+[2022-08-13 09:58:35,511] INFO [connector1|task-0] [Consumer clientId=order_server-dbhistory, groupId=order_server-dbhistory] Resetting generation due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972)
+[2022-08-13 09:58:35,512] INFO [connector1|task-0] [Consumer clientId=order_server-dbhistory, groupId=order_server-dbhistory] Request joining group due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000)
+[2022-08-13 09:58:35,515] INFO [connector1|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-08-13 09:58:35,516] INFO [connector1|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-08-13 09:58:35,516] INFO [connector1|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-08-13 09:58:35,517] INFO [connector1|task-0] App info kafka.consumer for order_server-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-08-13 09:58:35,520] INFO [connector1|task-0] AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = order_server-dbhistory
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 1
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:376)
+[2022-08-13 09:58:35,534] WARN [connector1|task-0] The configuration 'value.serializer' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:35,544] WARN [connector1|task-0] The configuration 'acks' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:35,545] WARN [connector1|task-0] The configuration 'batch.size' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:35,547] WARN [connector1|task-0] The configuration 'max.block.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:35,548] WARN [connector1|task-0] The configuration 'buffer.memory' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:35,548] WARN [connector1|task-0] The configuration 'key.serializer' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:35,548] WARN [connector1|task-0] The configuration 'linger.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-08-13 09:58:35,549] INFO [connector1|task-0] Kafka version: 3.1.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-08-13 09:58:35,550] INFO [connector1|task-0] Kafka commitId: 37edeed0777bacb3 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-08-13 09:58:35,550] INFO [connector1|task-0] Kafka startTimeMs: 1660364915549 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-08-13 09:58:35,554] INFO [connector1|task-0] Database history topic '(name=demo, numPartitions=1, replicationFactor=default, replicasAssignments=null, configs={cleanup.policy=delete, retention.ms=9223372036854775807, retention.bytes=-1})' created (io.debezium.relational.history.KafkaDatabaseHistory:549)
+[2022-08-13 09:58:35,616] INFO [connector1|task-0] App info kafka.admin.client for order_server-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-08-13 09:58:35,617] INFO [connector1|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-08-13 09:58:35,618] INFO [connector1|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-08-13 09:58:35,630] INFO [connector1|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-08-13 09:58:35,632] INFO [connector1|task-0] Reconnecting after finishing schema recovery (io.debezium.connector.mysql.MySqlConnectorTask:109)
+[2022-08-13 09:58:35,651] INFO [connector1|task-0] Requested thread factory for connector MySqlConnector, id = order_server named = change-event-source-coordinator (io.debezium.util.Threads:270)
+[2022-08-13 09:58:35,655] INFO [connector1|task-0] Creating thread debezium-mysqlconnector-order_server-change-event-source-coordinator (io.debezium.util.Threads:287)
+[2022-08-13 09:58:35,655] INFO [connector1|task-0] WorkerSourceTask{id=connector1-0} Source task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSourceTask:226)
+[2022-08-13 09:58:35,658] INFO [connector1|task-0] WorkerSourceTask{id=connector1-0} Executing source task (org.apache.kafka.connect.runtime.WorkerSourceTask:232)
+[2022-08-13 09:58:35,661] INFO [connector1|task-0] Metrics registered (io.debezium.pipeline.ChangeEventSourceCoordinator:103)
+[2022-08-13 09:58:35,662] INFO [connector1|task-0] Context created (io.debezium.pipeline.ChangeEventSourceCoordinator:106)
+[2022-08-13 09:58:35,671] INFO [connector1|task-0] No previous offset has been found (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:87)
+[2022-08-13 09:58:35,672] INFO [connector1|task-0] According to the connector configuration both schema and data will be snapshotted (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:89)
+[2022-08-13 09:58:35,672] INFO [connector1|task-0] Snapshot step 1 - Preparing (io.debezium.relational.RelationalSnapshotChangeEventSource:88)
+[2022-08-13 09:58:35,672] INFO [connector1|task-0] Snapshot step 2 - Determining captured tables (io.debezium.relational.RelationalSnapshotChangeEventSource:97)
+[2022-08-13 09:58:35,673] INFO [connector1|task-0] Read list of available databases (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:118)
+[2022-08-13 09:58:35,676] INFO [connector1|task-0] 	 list of available databases is: [company_db, customer, customers, delivery, employee_crud, employee_management_system, global-role-based-strategy, grievancesystem_db, information_schema, jwt_login_app, load_test, mysql, orders, performance_schema, product, proxibid_db, spring-security-rbac, sql_hr, sql_inventory, sql_invoicing, sql_store, student_db, sys, user_db, user_inventory] (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:125)
+[2022-08-13 09:58:35,681] INFO [connector1|task-0] Read list of available tables in each database (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:133)
+[2022-08-13 09:58:35,723] INFO [connector1|task-0] 	snapshot continuing with database(s): [orders] (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:154)
+[2022-08-13 09:58:35,724] INFO [connector1|task-0] Adding table user_db.user_entity to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,725] INFO [connector1|task-0] Adding table sql_store.order_item_notes to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,733] INFO [connector1|task-0] Adding table user_db.product to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,734] INFO [connector1|task-0] Adding table load_test.student_sequence to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,734] INFO [connector1|task-0] Adding table employee_crud.employees to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,735] INFO [connector1|task-0] Adding table company_db.employee to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,735] INFO [connector1|task-0] Adding table student_db.student to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,735] INFO [connector1|task-0] Adding table product.product_inventory to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,736] INFO [connector1|task-0] Adding table grievancesystem_db.complain to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,736] INFO [connector1|task-0] Adding table product.product_category to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,737] INFO [connector1|task-0] Adding table employee_management_system.employees to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,737] INFO [connector1|task-0] Adding table proxibid_db.hibernate_sequence to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,737] INFO [connector1|task-0] Adding table proxibid_db.auction to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,740] INFO [connector1|task-0] Adding table proxibid_db.bidder_cart to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,747] INFO [connector1|task-0] Adding table customer.customerdetails to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,747] INFO [connector1|task-0] Adding table global-role-based-strategy.pages_privileges to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,748] INFO [connector1|task-0] Adding table proxibid_db.live_bid to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,748] INFO [connector1|task-0] Adding table user_inventory.users to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,748] INFO [connector1|task-0] Adding table global-role-based-strategy.users_roles to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,749] INFO [connector1|task-0] Adding table sql_invoicing.payment_methods to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,749] INFO [connector1|task-0] Adding table orders.outbox to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,749] INFO [connector1|task-0] Adding table company_db.branch_supplier to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,750] INFO [connector1|task-0] Adding table sql_inventory.products to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,750] INFO [connector1|task-0] Adding table load_test.hibernate_sequence to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,751] INFO [connector1|task-0] Adding table global-role-based-strategy.role_pages_privileges to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,751] INFO [connector1|task-0] Adding table user_db.users to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,751] INFO [connector1|task-0] Adding table grievancesystem_db.rating to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,752] INFO [connector1|task-0] Adding table global-role-based-strategy.user to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,752] INFO [connector1|task-0] Adding table user_db.course to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,752] INFO [connector1|task-0] Adding table sql_store.shippers to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,753] INFO [connector1|task-0] Adding table proxibid_db.catalog to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,762] INFO [connector1|task-0] Adding table spring-security-rbac.role to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,762] INFO [connector1|task-0] Adding table customers.users to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,763] INFO [connector1|task-0] Adding table sql_store.order_items to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,763] INFO [connector1|task-0] Adding table grievancesystem_db.user to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,763] INFO [connector1|task-0] Adding table global-role-based-strategy.product to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,764] INFO [connector1|task-0] Adding table sql_store.orders to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,764] INFO [connector1|task-0] Adding table sql_store.order_statuses to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,764] INFO [connector1|task-0] Adding table proxibid_db.cart_item to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,765] INFO [connector1|task-0] Adding table spring-security-rbac.users_roles to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,765] INFO [connector1|task-0] Adding table user_db.users_roles to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,765] INFO [connector1|task-0] Adding table orders.customer_order to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,766] INFO [connector1|task-0] Adding table grievancesystem_db.category to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,766] INFO [connector1|task-0] Adding table global-role-based-strategy.privilege to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,766] INFO [connector1|task-0] Adding table sql_store.customers to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,766] INFO [connector1|task-0] Adding table load_test.tutorials to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,767] INFO [connector1|task-0] Adding table proxibid_db.category to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,767] INFO [connector1|task-0] Adding table sql_invoicing.payments to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,767] INFO [connector1|task-0] Adding table user_db.roles to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,770] INFO [connector1|task-0] Adding table user_db.student to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,776] INFO [connector1|task-0] Adding table spring-security-rbac.roles_privileges to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,776] INFO [connector1|task-0] Adding table sql_invoicing.invoices to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,778] INFO [connector1|task-0] Adding table company_db.branch to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,778] INFO [connector1|task-0] Adding table user_db.students_courses to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,779] INFO [connector1|task-0] Adding table sql_hr.employees to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,779] INFO [connector1|task-0] Adding table sql_invoicing.clients to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,779] INFO [connector1|task-0] Adding table proxibid_db.history_cart to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,780] INFO [connector1|task-0] Adding table user_db.user_role to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,780] INFO [connector1|task-0] Adding table proxibid_db.bid_winner to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,780] INFO [connector1|task-0] Adding table company_db.works_with to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,781] INFO [connector1|task-0] Adding table global-role-based-strategy.page to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,781] INFO [connector1|task-0] Adding table user_db.role to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,781] INFO [connector1|task-0] Adding table proxibid_db.bidder to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,782] INFO [connector1|task-0] Adding table spring-security-rbac.privilege to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,782] INFO [connector1|task-0] Adding table spring-security-rbac.user to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,782] INFO [connector1|task-0] Adding table sql_store.products to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,783] INFO [connector1|task-0] Adding table customers.customers to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,783] INFO [connector1|task-0] Adding table jwt_login_app.users to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,783] INFO [connector1|task-0] Adding table load_test.user to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,784] INFO [connector1|task-0] Adding table proxibid_db.bid to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,786] INFO [connector1|task-0] Adding table global-role-based-strategy.role to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,791] INFO [connector1|task-0] Adding table company_db.test_trigger to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,792] INFO [connector1|task-0] Adding table proxibid_db.bidder_history_item to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,792] INFO [connector1|task-0] Adding table sql_hr.offices to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,792] INFO [connector1|task-0] Adding table company_db.client to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,793] INFO [connector1|task-0] Adding table load_test.student to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,793] INFO [connector1|task-0] Adding table jwt_login_app.reset_password_token to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,794] INFO [connector1|task-0] Adding table spring-security-rbac.product to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,795] INFO [connector1|task-0] Adding table proxibid_db.notification to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,795] INFO [connector1|task-0] Adding table proxibid_db.seller to the list of capture schema tables (io.debezium.relational.RelationalSnapshotChangeEventSource:190)
+[2022-08-13 09:58:35,796] INFO [connector1|task-0] Snapshot step 3 - Locking captured tables [orders.outbox] (io.debezium.relational.RelationalSnapshotChangeEventSource:104)
+[2022-08-13 09:58:35,798] INFO [connector1|task-0] Flush and obtain global read lock to prevent writes to database (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:427)
+[2022-08-13 09:58:35,821] INFO [connector1|task-0] Snapshot step 4 - Determining snapshot offset (io.debezium.relational.RelationalSnapshotChangeEventSource:110)
+[2022-08-13 09:58:35,823] INFO [connector1|task-0] Read binlog position of MySQL primary server (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:275)
+[2022-08-13 09:58:35,825] INFO [connector1|task-0] 	 using binlog 'SF-CPU-562-bin.000076' at position '1556820' and gtid '' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:286)
+[2022-08-13 09:58:35,832] INFO [connector1|task-0] Snapshot step 5 - Reading structure of captured tables (io.debezium.relational.RelationalSnapshotChangeEventSource:113)
+[2022-08-13 09:58:35,832] INFO [connector1|task-0] All eligible tables schema should be captured, capturing: [company_db.branch, company_db.branch_supplier, company_db.client, company_db.employee, company_db.test_trigger, company_db.works_with, customer.customerdetails, customers.customers, customers.users, employee_crud.employees, employee_management_system.employees, global-role-based-strategy.page, global-role-based-strategy.pages_privileges, global-role-based-strategy.privilege, global-role-based-strategy.product, global-role-based-strategy.role, global-role-based-strategy.role_pages_privileges, global-role-based-strategy.user, global-role-based-strategy.users_roles, grievancesystem_db.category, grievancesystem_db.complain, grievancesystem_db.rating, grievancesystem_db.user, jwt_login_app.reset_password_token, jwt_login_app.users, load_test.hibernate_sequence, load_test.student, load_test.student_sequence, load_test.tutorials, load_test.user, orders.customer_order, orders.outbox, product.product_category, product.product_inventory, proxibid_db.auction, proxibid_db.bid, proxibid_db.bid_winner, proxibid_db.bidder, proxibid_db.bidder_cart, proxibid_db.bidder_history_item, proxibid_db.cart_item, proxibid_db.catalog, proxibid_db.category, proxibid_db.hibernate_sequence, proxibid_db.history_cart, proxibid_db.live_bid, proxibid_db.notification, proxibid_db.seller, spring-security-rbac.privilege, spring-security-rbac.product, spring-security-rbac.role, spring-security-rbac.roles_privileges, spring-security-rbac.user, spring-security-rbac.users_roles, sql_hr.employees, sql_hr.offices, sql_inventory.products, sql_invoicing.clients, sql_invoicing.invoices, sql_invoicing.payment_methods, sql_invoicing.payments, sql_store.customers, sql_store.order_item_notes, sql_store.order_items, sql_store.order_statuses, sql_store.orders, sql_store.products, sql_store.shippers, student_db.student, user_db.course, user_db.product, user_db.role, user_db.roles, user_db.student, user_db.students_courses, user_db.user_entity, user_db.user_role, user_db.users, user_db.users_roles, user_inventory.users] (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:328)
+[2022-08-13 09:58:36,202] INFO [connector1|task-0] Reading structure of database 'company_db' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,321] INFO [connector1|task-0] Reading structure of database 'customer' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,331] INFO [connector1|task-0] Reading structure of database 'customers' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,362] INFO [connector1|task-0] Reading structure of database 'employee_crud' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,382] INFO [connector1|task-0] Reading structure of database 'employee_management_system' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,393] INFO [connector1|task-0] Reading structure of database 'global-role-based-strategy' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,434] INFO [connector1|task-0] Reading structure of database 'grievancesystem_db' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,457] INFO [connector1|task-0] Reading structure of database 'jwt_login_app' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,486] INFO [connector1|task-0] Reading structure of database 'load_test' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,504] INFO [connector1|task-0] Reading structure of database 'orders' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,520] INFO [connector1|task-0] Reading structure of database 'product' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,546] INFO [connector1|task-0] Reading structure of database 'proxibid_db' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,598] INFO [connector1|task-0] Reading structure of database 'spring-security-rbac' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,669] INFO [connector1|task-0] Reading structure of database 'sql_hr' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,678] INFO [connector1|task-0] Reading structure of database 'sql_inventory' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,683] INFO [connector1|task-0] Reading structure of database 'sql_invoicing' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,703] INFO [connector1|task-0] Reading structure of database 'sql_store' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,727] INFO [connector1|task-0] Reading structure of database 'student_db' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,733] INFO [connector1|task-0] Reading structure of database 'user_db' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,820] INFO [connector1|task-0] Reading structure of database 'user_inventory' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-08-13 09:58:36,836] INFO [connector1|task-0] Snapshot step 6 - Persisting schema history (io.debezium.relational.RelationalSnapshotChangeEventSource:117)
+[2022-08-13 09:58:36,853] INFO [connector1|task-0] [Producer clientId=order_server-dbhistory] Resetting the last seen epoch of partition demo-0 to 0 since the associated topicId changed from null to fVtJG6OrTcmb2oaPpEj5Xw (org.apache.kafka.clients.Metadata:402)
+[2022-08-13 09:58:36,926] INFO [connector1|task-0] Releasing global read lock to enable MySQL writes (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:433)
+[2022-08-13 09:58:36,927] INFO [connector1|task-0] Writes to MySQL tables prevented for a total of 00:00:01.106 (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:437)
+[2022-08-13 09:58:36,933] INFO [connector1|task-0] Snapshot step 7 - Snapshotting data (io.debezium.relational.RelationalSnapshotChangeEventSource:129)
+[2022-08-13 09:58:36,934] INFO [connector1|task-0] Snapshotting contents of 1 tables while still in transaction (io.debezium.relational.RelationalSnapshotChangeEventSource:303)
+[2022-08-13 09:58:36,934] INFO [connector1|task-0] Exporting data from table 'orders.outbox' (1 of 1 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:339)
+[2022-08-13 09:58:36,936] INFO [connector1|task-0] 	 For table 'orders.outbox' using select statement: 'SELECT `id`, `created_at`, `event`, `event_id`, `payload_id` FROM `orders`.`outbox`' (io.debezium.relational.RelationalSnapshotChangeEventSource:347)
+[2022-08-13 09:58:36,947] INFO [connector1|task-0] 	 Finished exporting 0 records for table 'orders.outbox'; total duration '00:00:00.012' (io.debezium.relational.RelationalSnapshotChangeEventSource:393)
+[2022-08-13 09:58:36,952] INFO [connector1|task-0] Snapshot - Final stage (io.debezium.pipeline.source.AbstractSnapshotChangeEventSource:88)
+[2022-08-13 09:58:36,953] INFO [connector1|task-0] Snapshot ended with SnapshotResult [status=COMPLETED, offset=MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=SF-CPU-562-bin.000076, currentBinlogPosition=1556820, currentRowNumber=0, serverId=0, sourceTime=2022-08-13T04:28:36.911Z, threadId=-1, currentQuery=null, tableIds=[orders.outbox], databaseName=user_inventory], snapshotCompleted=true, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=null, currentGtidSet=null, restartBinlogFilename=SF-CPU-562-bin.000076, restartBinlogPosition=1556820, restartRowsToSkip=0, restartEventsToSkip=0, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]]] (io.debezium.pipeline.ChangeEventSourceCoordinator:156)
+[2022-08-13 09:58:36,956] INFO [connector1|task-0] Requested thread factory for connector MySqlConnector, id = order_server named = binlog-client (io.debezium.util.Threads:270)
+[2022-08-13 09:58:36,958] INFO [connector1|task-0] Starting streaming (io.debezium.pipeline.ChangeEventSourceCoordinator:173)
+[2022-08-13 09:58:36,967] INFO [connector1|task-0] Skip 0 events on streaming start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:923)
+[2022-08-13 09:58:36,967] INFO [connector1|task-0] Skip 0 rows on streaming start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:927)
+[2022-08-13 09:58:36,968] INFO [connector1|task-0] Creating thread debezium-mysqlconnector-order_server-binlog-client (io.debezium.util.Threads:287)
+[2022-08-13 09:58:36,972] INFO [connector1|task-0] Creating thread debezium-mysqlconnector-order_server-binlog-client (io.debezium.util.Threads:287)
+[2022-08-13 09:58:36,982] INFO [connector1|task-0] Connected to MySQL binlog at localhost:3306, starting at MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=SF-CPU-562-bin.000076, currentBinlogPosition=1556820, currentRowNumber=0, serverId=0, sourceTime=2022-08-13T04:28:36.911Z, threadId=-1, currentQuery=null, tableIds=[orders.outbox], databaseName=user_inventory], snapshotCompleted=true, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=null, currentGtidSet=null, restartBinlogFilename=SF-CPU-562-bin.000076, restartBinlogPosition=1556820, restartRowsToSkip=0, restartEventsToSkip=0, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]] (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:1220)
+[2022-08-13 09:58:36,985] INFO [connector1|task-0] Waiting for keepalive thread to start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:944)
+[2022-08-13 09:58:36,985] INFO [connector1|task-0] Creating thread debezium-mysqlconnector-order_server-binlog-client (io.debezium.util.Threads:287)
+[2022-08-13 09:58:37,087] INFO [connector1|task-0] Keepalive thread is running (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:951)
+[2022-08-13 09:58:37,199] WARN [connector1|task-0] [Producer clientId=connector-producer-connector1-0] Error while fetching metadata with correlation id 3 : {order_server=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1099)
+[2022-08-13 09:58:37,299] INFO [connector1|task-0] [Producer clientId=connector-producer-connector1-0] Resetting the last seen epoch of partition order_server-0 to 0 since the associated topicId changed from null to LVkchKJTThukBrB7dOsgOA (org.apache.kafka.clients.Metadata:402)
+[2022-08-13 09:58:45,338] INFO [connector1|task-0|offsets] WorkerSourceTask{id=connector1-0} Either no records were produced by the task since the last offset commit, or every record has been filtered out by a transformation or dropped due to transformation or conversion errors. (org.apache.kafka.connect.runtime.WorkerSourceTask:484)
+[2022-08-13 09:58:55,372] INFO [connector1|task-0|offsets] WorkerSourceTask{id=connector1-0} Either no records were produced by the task since the last offset commit, or every record has been filtered out by a transformation or dropped due to transformation or conversion errors. (org.apache.kafka.connect.runtime.WorkerSourceTask:484)
