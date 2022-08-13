@@ -30,8 +30,9 @@ public class OrderService {
         Outbox payload = new Outbox();
         payload.setEvent("order_created");
         payload.setEventId(order.getId());
-        payload.setCustomerOrder(order);
+        payload.setOrderInfo(order.toString());
         payload.setCreatedAt(LocalDateTime.now());
+        outboxRepository.save(payload);
 
         //delete immediately - still the entry will be picked up from the logs as there was an insert
         //in the previous line

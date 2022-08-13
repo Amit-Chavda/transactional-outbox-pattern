@@ -21,6 +21,6 @@ public class Outbox {
 
     private String event;
     private long eventId;
-    private transient CustomerOrder customerOrder;
+    private String orderInfo;
     private LocalDateTime createdAt;
 }

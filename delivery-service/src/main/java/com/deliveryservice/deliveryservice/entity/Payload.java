@@ -15,6 +15,6 @@ public class Payload {
     private int id;
     private String event;
     private long eventId;
-    private transient CustomerOrder customerOrder;
+    private String  orderInfo;
     private LocalDateTime createdAt;
 }

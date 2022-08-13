@@ -10,9 +10,8 @@ import java.time.LocalDateTime;
 @Service
 public class DeliveryService {
     @KafkaListener(topics = "order_server.orders.outbox")
-    public void receive(@Payload(required = false) KafkaMessage message) {
+    public void receive(KafkaMessage message) {
         if (message != null) {
-            message.setReceivedAt(LocalDateTime.now());
             System.out.println(message);
         } else {
             System.out.println("Empty message received!");
