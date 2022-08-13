@@ -1,6 +1,8 @@
 # transactional-outbox-pattern
 Sample for transactional outbox pattern
 
+### WHAT WHY and HOW
+https://dzone.com/articles/implementing-the-outbox-pattern
 
 ### Required Tools:
 
