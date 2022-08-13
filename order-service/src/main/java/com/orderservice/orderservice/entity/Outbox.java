@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -24,6 +21,7 @@ public class Outbox {
 
     private String event;
     private long eventId;
-    private Order payload;
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private CustomerOrder payload;
     private LocalDateTime createdAt;
 }

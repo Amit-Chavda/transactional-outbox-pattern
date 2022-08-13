@@ -1,7 +1,6 @@
 package com.orderservice.orderservice.controller;
 
-
-import com.orderservice.orderservice.entity.Order;
+import com.orderservice.orderservice.entity.CustomerOrder;
 import com.orderservice.orderservice.service.OrderService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +17,7 @@ public class OrderController {
     }
 
     @PostMapping("/order")
-    public Order createOrder(@RequestBody Order order) {
+    public CustomerOrder createOrder(@RequestBody CustomerOrder order) {
         return service.save(order);
 
     }

@@ -10,9 +10,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Payload {
-    private int id;
-    private String event;
-    private int eventId;
-    private String payload;
-    private String createdAt;
+    private String name;
+    private int qty;
 }
